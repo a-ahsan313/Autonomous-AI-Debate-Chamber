@@ -1,4 +1,4 @@
-# Autonomous AI Debate Chamber
+## Autonomous AI Debate Chamber
 
 Welcome to your Machine Learning Engineering sprint! In this project, you will construct a robust Python backend that pits two Generative AI models against each other in a logical debate, which is then mathematically evaluated by a Predictive Regression Model.
 
