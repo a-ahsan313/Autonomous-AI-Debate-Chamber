@@ -6,8 +6,8 @@ class DebateConductor:
         # We enforce local Ollama default port for maximum data privacy
         self.ollama_url = "http://localhost:11434/api/generate"
         self.debate_history = []
-        #  Select a lightweight model like 'mistral' or 'llama3)'
-        self.model = "mistral"
+        #  Select a lightweight model like 'mistral' or 'llama3.2:3b)'
+        self.model = "llama3.2:3b"
 
     def _format_history(self):
         """
