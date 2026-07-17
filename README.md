@@ -10,7 +10,7 @@ This project demonstrates the integration of **Generative AI**, **Machine Learni
 
 - 🤖 Autonomous AI vs AI debate — two personas (Agent A defends the topic, Agent B challenges it) alternate turns for 6 total turns (3 rounds each)
 - 🧠 Context-aware conversation memory — every prompt includes the full transcript so far, so each agent directly rebuts what the other just said instead of starting fresh each turn
-- 💬 Local LLM integration via **Ollama**'s `/api/generate` endpoint (default model: `mistral`, swappable to any pulled Ollama model)
+- 💬 Local LLM integration via **Ollama**'s `/api/generate` endpoint (default model: `llama3.2:3b`, swappable to any pulled Ollama model)
 - 📊 Machine Learning-based debate evaluation — a `RandomForestRegressor` trained on historical debate data scores each side's full transcript
 - 📈 Live-rendered verdict overlay showing each agent's score, the winner, and the trained model's MSE / R² metrics
 - 🌐 Flask REST API backend with 5 endpoints (start, next-turn, train, evaluate) and CORS enabled for the static frontend
@@ -144,7 +144,7 @@ pip install -r requirements.txt
 2. Pull the model the app expects by default:
 
    ```bash
-   ollama pull mistral
+   ollama pull llama3.2:3b
    ```
 
 3. Make sure the Ollama server is running (it starts automatically after install on most platforms; if not, run `ollama serve` in its own terminal). It must be reachable at `http://localhost:11434`, which `services/aiService.py` calls directly.
